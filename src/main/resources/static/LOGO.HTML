@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+div
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+
+  background-image: url('b16.jpg');
+  background-size:cover;
+  
+ 
+  }
+ 
+.box 
+{
+    width: 300px;
+    height: 300px;
+    border-radius:25px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+        }
+@keyframes fadeIn
+{
+            from { opacity: 0; }
+            to { opacity: 1; }
+}
+</style>
+</head>
+<center>
+<body>
+<div><img src="logooo.jpg"  align="center" class="box" ></img>
+
+</div>
+<script type="text/javascript">
+    function redirectToNewPage() {
+        window.location.href = "home.html"; 
+    }
+
+    
+    setTimeout(redirectToNewPage, 2500);
+</script>
+</body>
+</html>
+

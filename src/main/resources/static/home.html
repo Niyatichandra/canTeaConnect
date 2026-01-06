@@ -1,0 +1,193 @@
+<html>
+<head><title>HOMEPAGE</title>
+<style>
+body{
+  background-image: url('food.jpg');
+  background-size:cover;}
+#slideshow {
+    height: 250px;
+    width: 1200px;
+    
+}
+.slide-wrapper {
+    width: calc(1200px * 3); 
+   display: flex;
+   animation: slide 5s linear infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes slide {
+      0%,  20% { transform: translateX(0); }
+  40% { transform: translateX(-1200px); }
+  60%  { transform: translateX(-2400px); }
+  80%, 100%  { transform: translateX(0); } 
+  
+}
+
+.search form {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    gap: 5px;                 
+}
+
+.search input[type="text"] {
+    height: 30px; 
+    width:400px;	
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.search button {
+    height: 30px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lavender;
+    background: white;
+    cursor: pointer;
+}
+
+.search button img {
+    height: 18px;
+    width: 18px;
+}
+#b1,#b2,#b3,#b4,#b5,#b6{
+  border-radius:50%;
+  object-fit:cover;
+  border:none;
+  margin-right: 40px;
+  margin-left:40px;
+  }
+.dropdown {
+    
+    position: absolute; 
+    top: 5px; 
+    left: 0;
+    display: inline-block;
+    z-index: 100;
+}
+.dropbtn
+ {
+  cursor:pointer;
+  padding:18px;
+  }
+  
+  .dropdown-content
+  {
+  font-size:20px;
+  background-color:lavender;
+  position:relative;
+  display:inline-block;
+  }
+  .dropdown-content
+  {
+  display:none;
+  position:absolute;
+  min-width:160px;
+  box-shadow:0px 8px 16px 0px
+  rgba(0,0,0,0.2);
+  z-index:1;
+  }
+  .dropdown-content a:hover
+  {
+    background-color:pink;
+	}
+	.dropdown-content a{
+	padding:12px 16px;
+	display:block;
+	}
+	.show{
+	display:block;}
+  
+
+
+
+
+</style>
+</head>
+<body>
+<script>
+function myFunction()
+{
+document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick=function(event)
+{
+if(!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn'))
+{
+  var dd=document.getElementsByClassName("dropdown-content");
+  var i;
+  for(i=0;i<dd.length;i++)
+  {
+     var opendd=dd[i];
+	 if(opendd.classList.contains('show'))
+	 {
+	    opendd.classList.remove('show');
+		}
+		}
+		}
+		}
+	</script>
+
+<div class="search">
+    <form>
+        <input type="text" placeholder="Search Items" name="search" >
+        <button>
+            <img src="glass.jpg" height="20" width="15">
+        </button>
+    </form>
+</div>
+
+<div id="slideshow">
+    <div class="slide-wrapper">
+        <div class="slide"><img src="2.png"></div>
+        <div class="slide"><img src="3.png"></div>
+        <div class="slide"><img src="1.png"></div>
+		
+		
+    </div>
+</div>
+<br><br>
+<form>
+  <button id='b1' ><img src="agarwal.png" style="width:400px; height:400px; border-radius:50%; object-fit:cover"></button>
+  <button id='b2' ><img src="fnf.jpg" style="width:400px; height:400px; border-radius:50%; object-fit:cover"></button>
+  <button id='b3' ><img src="spicy_bite.png" style="width:400px; height:400px; border-radius:50%; object-fit:cover"></button>
+  <br><br><br>
+  <button id='b4' ><img src="desi_zayka.png" style="width:400px; height:400px; border-radius:50%; object-fit:cover"></button>
+  <button id='b5' ><img src="annapurna.png" style="width:400px; height:400px; border-radius:50%; object-fit:cover"></button>
+  <button id='b6' ><img src="shanus.png" style="width:400px; height:400px; border-radius:50%; object-fit:cover"></button>
+  
+</form>
+<div>
+<a href="login.html">
+  <img src="avatar.jpg" style="position: absolute; top: 0; right: 0;" alt="Go to top" height="50" width="50">
+</a>
+</div>
+<div>
+<a href="cart.html">
+  <img src="cart.png" style="position: absolute; top: 0; right: 50;" alt="Go to top" height="50" width="40">
+</a>
+</div>
+
+<div class="dropdown" >
+<button onclick="myFunction()" class="dropbtn">
+  <img src="menu_lines.jpg" style="position: absolute; top: 0; left: 0;" alt="Go to top" height="40" width="50" onclick="toggleDropdown()"></button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="profile.html">Profile</a>
+    <a href="about_us.html">About Us</a>
+    <a href="help.html">Help</a>
+    <a href="signup.html">Log Out</a>
+  </div>
+</div>
+<footer>
+  <p>&copy; 2025 CanTea Connect. All rights reserved.</p>
+</footer>
+  
+</body>
+</html>
