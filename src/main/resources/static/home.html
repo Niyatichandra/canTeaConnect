@@ -32,10 +32,6 @@
     100% { transform: translateX(-300%); }
 }
 
-        .canteen-container { text-align: center; padding: 40px; }
-        .canteen-btn { background: none; border: none; cursor: pointer; margin: 20px; transition: transform 0.3s; }
-        .canteen-btn:hover { transform: scale(1.1); }
-        .canteen-btn img { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; border: 5px solid white; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
 
         .dropdown { position: absolute; top: 10px; left: 10px; }
         .dropdown-content { display: none; position: absolute; background: white; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 10; }
@@ -44,6 +40,37 @@
         .show { display: block; }
 
         footer { background: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+
+.canteen-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+.canteen-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 150px;
+}
+
+
+.canteen-link img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+        .canteen-link:hover {
+    transform: scale(1.1);
+}
     </style>
 </head>
 <body>
@@ -65,17 +92,21 @@
 
 <div id="slideshow">
     <div class="slide-wrapper">
-        <div class="slide"><img src="1.png"></div> <div class="slide"><img src="2.png"></div> <div class="slide"><img src="3.png"></div> <div class="slide"><img src="1.png"></div> </div>
+        <div class="slide"><img src="1.png"></div>
+        <div class="slide"><img src="2.png"></div>
+        <div class="slide"><img src="3.png"></div>
+        <div class="slide"><img src="1.png"></div> </div>
 </div>
+<div class="canteen-wrapper">
 
-<div class="canteen-container">
-    <button class="canteen-btn" onclick="goToMenu(1)"><img src="agarwal.png"><br><b>Agarwal</b></button>
-    <button class="canteen-btn" onclick="goToMenu(2)"><img src="fnf.jpg"><br><b>FnF</b></button>
-    <button class="canteen-btn" onclick="goToMenu(3)"><img src="spicy_bite.png"><br><b>Spicy Bite</b></button>
+    <a href="menu.html?id=101" class="canteen-link"><img src="annapurna.png"><br><span>Annapurna</span></a>
+    <a href="menu.html?id=102" class="canteen-link"><img src="spicy_bite.png"><br><span>Spicy Bite</span></a>
+    <a href="menu.html?id=103" class="canteen-link"><img src="desi_zayka.png"><br><span>Desi Zayka</span></a>
     <br>
-    <button class="canteen-btn" onclick="goToMenu(4)"><img src="desi_zayka.png"><br><b>Desi Zayka</b></button>
-    <button class="canteen-btn" onclick="goToMenu(5)"><img src="annapurna.png"><br><b>Annapurna</b></button>
-    <button class="canteen-btn" onclick="goToMenu(6)"><img src="shanus.png"><br><b>Shanus</b></button>
+    <a href="menu.html?id=104" class="canteen-link"><img src="fnf.jpg"><br><span>FnF</span></a>
+    <a href="menu.html?id=105" class="canteen-link"><img src="shanus.png"><br><span>Shanus</span></a>
+    <a href="menu.html?id=106" class="canteen-link"><img src="agarwal.png"><br><span>Aggarwal</span></a>
+
 </div>
 
 <script>
